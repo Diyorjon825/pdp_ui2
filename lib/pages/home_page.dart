@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
         title:
             const Text('Apple Products', style: TextStyle(color: Colors.white)),
       ),
-      body: Column(
+      body: ListView(
         children: [
           Container(
             height: 230,
@@ -79,10 +79,8 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-          Expanded(
-            child: ListView(
-              children: listImages.map((e) => product(e)).toList(),
-            ),
+          Column(
+            children: listImages.map((e) => product(e)).toList(),
           )
         ],
       ),
